@@ -1,0 +1,23 @@
+schema {
+  query: Query
+}
+
+interface Node {
+  id: ID!
+}
+
+type Query {
+  node(id: ID!): Node
+  viewer: Viewer
+}
+
+type User implements Node {
+  id: ID!
+  username: String
+  name: String
+}
+
+type Viewer {
+  root: Viewer!
+  user: User
+}

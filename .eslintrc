@@ -1,0 +1,34 @@
+{
+  "parser"  : "babel-eslint",
+  "extends" : [
+    "standard",
+    "standard-react"
+  ],
+  "plugins" : [
+    "flow-vars"
+  ],
+  "env"     : {
+    "browser" : true
+  },
+  "globals" : {
+    "Action"       : false,
+    "__DEV__"      : false,
+    "__PROD__"     : false,
+    "__DEBUG__"    : false,
+    "__DEBUG_NEW_WINDOW__" : false,
+    "__BASENAME__" : false
+  },
+  "rules": {
+    "semi" : [2, "always"],
+    "max-len": [2, 120, 2],
+    "flow-vars/define-flow-type": 1,
+    "flow-vars/use-flow-type": 1,
+    "comma-dangle": [2, "only-multiline"],
+    "space-before-function-paren": [2, "never"],
+    "object-curly-spacing": [2, "always"],
+    "no-multiple-empty-lines": [2, {"max": 2}],
+    "operator-linebreak": [2, "after"],
+    "jsx-quotes": [2,"prefer-double"],
+    "generator-star-spacing": [2, {"before": false, "after": true}]
+  }
+}
